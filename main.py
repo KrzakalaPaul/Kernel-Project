@@ -2,8 +2,11 @@ from kernel_class import Kernel
 import numpy as np
 
 ## ------------------------------------ LOAD GRAM MATRICES ------------------------------------ # 
-  
+
+# SELECT DEPTH OF RELABELING
 depth_wl=[1,2,3,4]
+
+# SELECT MAX LENGTH OF WALKS
 max_path_lenght=3
 
 train_train_dic={}
@@ -44,9 +47,9 @@ class Combinaison_of_Kernel(Kernel):
 
 
 ## ------------------------------------ FineTuning ------------------------------------ # 
-
-from finetuning import eval_model
 '''
+from finetuning import eval_model
+
 for alpha_k in [1]:
     for alpha_n in [0.1]:
         for C in [1e-2,1e-1,1]:

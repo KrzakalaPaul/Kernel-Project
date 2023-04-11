@@ -10,6 +10,10 @@ class SVM:
         self.class_weight = class_weight
 
     def fit(self,K,y):
+
+        # ENFORCE SYMMETRY THAT MIGHT BE LOST DUE TO COMPRESSION
+        K=(K+K.T)/2
+
         n_class_1 = np.sum(y)
         y=2*y-1
         N = len(y)

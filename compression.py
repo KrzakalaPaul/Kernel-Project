@@ -9,7 +9,7 @@ for k in depth_wl:
         loaded=np.load('ComputeKernels\\gram_saves\\'+save_name+'.npz')
 
         dic={}
-        for key in loaded.keys():
-            dic[key]=loaded[key].astype(np.int8)
+        for n in [0,1,2,3]:
+            dic[str(n)]=loaded[str(n)].astype(np.float16)
 
         np.savez_compressed('ComputeKernels\\gram_saves\\'+save_name+'.npz',**dic)

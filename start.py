@@ -74,4 +74,4 @@ validation_preds=model.pred(test_indices=None)
 
 dataframe = pd.DataFrame({'Predicted' : validation_preds} )
 dataframe.index += 1
-dataframe.to_csv('validation_pred.csv',index_label='Id')
+dataframe.to_csv('test_pred.csv',index_label='Id')
